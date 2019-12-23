@@ -1,4 +1,8 @@
 alias gb='git branch'
+alias gd='git diff'
+alias gdf='git diff --name-only'
 alias gb.a='git branch -a'
 alias gs='git status'
 alias gc='git commit -m'
+alias git.history.oneline='git log --graph --pretty=oneline --abbrev-commit'
+alias git.clean.local.branches='git branch -D `git branch | grep -v \* | xargs`'
