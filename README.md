@@ -20,5 +20,5 @@ Then you will need to add the following to you .*rc file ( if in zsh it would be
 
 ```
 # Load Aliases
-source .aliases_collection/configuration.sh
+source ~/.aliases_collection/configuration.sh
 ```
