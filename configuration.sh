@@ -3,6 +3,7 @@
 
 local loadShell=true
 local loadCode=true
+local loadGit=true
 
 if [[ $loadShell = true ]]; then
     source ~/.aliases_collection/shell.sh
@@ -15,5 +16,12 @@ if [[ $loadCode = true ]]; then
     source ~/.aliases_collection/code.sh
     if [[ -a ~/.aliases_collection/code.custom.sh ]]; then
         source ~/.aliases_collection/code.custom.sh
+    fi
+fi
+
+if [[ $loadGit = true ]]; then
+    source ~/.aliases_collection/git.sh
+    if [[ -a ~/.aliases_collection/git.custom.sh ]]; then
+        source ~/.aliases_collection/git.custom.sh
     fi
 fi
