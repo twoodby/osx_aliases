@@ -4,8 +4,14 @@
 local loadShell=true
 local loadCode=true
 local loadGit=true
+local loadGitCommit=true
 local loadAws=true
 local loadAndroid=true
+
+# Load any custom configurations or can be used to override the above settings.
+if [[ -a ~/.aliases_collection/custom/configuration.sh ]]; then
+    source ~/.aliases_collection/custom/configuration.sh
+fi
 
 if [[ $loadShell = true ]]; then
     source ~/.aliases_collection/shell.sh
@@ -65,4 +71,9 @@ if [[ $loadAndroid = true ]]; then
     if [[ -a ~/.aliases_collection/custom/android.sh ]]; then
         source ~/.aliases_collection/custom/android.sh
     fi
+fi
+
+# Load Custom Generics
+if [[ -a ~/.aliases_collection/custom/generic.sh ]]; then
+    source ~/.aliases_collection/custom/generic.sh
 fi
